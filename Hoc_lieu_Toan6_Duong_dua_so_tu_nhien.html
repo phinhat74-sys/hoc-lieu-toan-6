@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Học liệu số Toán 6 tương tác về số tự nhiên, phép chia hết và dấu hiệu chia hết.">
+<title>Đường đua Toán học – Chinh phục số tự nhiên</title>
+<style>
+:root{--ink:#18243a;--muted:#63728a;--bg:#f3f6fb;--card:#fff;--blue:#2457d6;--cyan:#0b9b9b;--gold:#f2b43c;--line:#dce4ef;--good:#16834a;--bad:#c43d4b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{color:#fff;background:linear-gradient(115deg,#142d69,#285bd2 60%,#08a6a0);padding:28px 18px}.wrap{max-width:1000px;margin:auto;padding:0 16px}
+.eyebrow{text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;font-weight:750;opacity:.85}h1{font-size:clamp(1.7rem,4vw,2.55rem);line-height:1.12;margin:8px 0}header p{max-width:720px;color:#eaf1ff;margin:8px 0}
+main{padding:18px 0 42px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:15px;box-shadow:0 5px 18px #23395b0b}
+h2{margin:0 0 9px;font-size:1.35rem}.muted{color:var(--muted)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.tabs button,button{border:0;border-radius:11px;padding:11px 15px;font:inherit;font-weight:700;cursor:pointer}.tabs button{background:#e7efff;color:#1b438e}.tabs button.active,.primary{background:var(--blue);color:white}.secondary{background:#e9effb;color:#1d438d}
+.panel{display:none}.panel.active{display:block}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.rule{padding:13px;background:#eef4ff;border-left:4px solid var(--blue);border-radius:9px;margin:10px 0}.rule b{color:#173f9a}
+.example{background:#f7fafc;border:1px solid var(--line);padding:12px;border-radius:12px;margin:9px 0}
+.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:12px 0}input,select{font:inherit;padding:10px;border:1px solid #cbd6e5;border-radius:10px;max-width:100%}
+.track{height:14px;background:#e6ecf5;border-radius:20px;overflow:hidden;margin:12px 0}.bar{height:100%;width:0;background:linear-gradient(90deg,#2457d6,#0daca0);transition:width .25s}
+.levels{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.level{padding:10px;border:1px solid var(--line);border-radius:12px;background:#f8faff;text-align:center;font-weight:700}
+.qbox{padding:16px;background:#f8fbff;border:1px solid var(--line);border-radius:14px}.answers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:12px 0}.answers button{background:#edf2fa;color:var(--ink);text-align:left;border:1px solid var(--line);font-weight:600}.answers button.chosen{border:2px solid var(--blue);background:#e6edff}
+.feedback{font-weight:700;margin:9px 0}.good{color:var(--good)}.bad{color:var(--bad)}
+footer{text-align:center;color:var(--muted);font-size:.88rem;padding:20px}
+@media(max-width:650px){.grid{grid-template-columns:1fr}.levels{grid-template-columns:repeat(2,1fr)}.answers{grid-template-columns:1fr 1fr}.card{padding:15px}}
+@media(max-width:370px){.answers{grid-template-columns:1fr}}
+</style></head><body>
+<header><div class="wrap"><div class="eyebrow">Học liệu số Toán 6 · Học qua thử thách</div>
+<h1>ĐƯỜNG ĐUA TOÁN HỌC<br>CHINH PHỤC SỐ TỰ NHIÊN</h1>
+<p>Ôn luyện kiến thức số tự nhiên qua nhiệm vụ ngắn, phản hồi tức thì và các chặng thử thách. Hãy suy nghĩ trước khi chọn đáp án!</p></div></header>
+<main class="wrap">
+<div class="tabs"><button class="active" data-tab="kienthuc">Bản đồ kiến thức</button><button data-tab="thuthach">Vào đường đua</button><button data-tab="huongdan">Hướng dẫn</button></div>
+<section id="kienthuc" class="panel active">
+<div class="grid">
+<div class="card"><h2>1. Phép chia hết</h2><p>Nếu số tự nhiên a chia hết cho số tự nhiên b khác 0 thì tồn tại số tự nhiên q sao cho:</p><div class="rule">a = b × q</div><div class="example"><b>Ví dụ:</b> 24 chia hết cho 6 vì 24 = 6 × 4.</div></div>
+<div class="card"><h2>2. Dấu hiệu chia hết</h2><ul><li><b>Chia hết cho 2:</b> chữ số tận cùng là 0, 2, 4, 6, 8.</li><li><b>Chia hết cho 5:</b> chữ số tận cùng là 0 hoặc 5.</li><li><b>Chia hết cho 3:</b> tổng các chữ số chia hết cho 3.</li><li><b>Chia hết cho 9:</b> tổng các chữ số chia hết cho 9.</li></ul></div>
+<div class="card"><h2>3. Số nguyên tố và hợp số</h2><p><b>Số nguyên tố</b> là số tự nhiên lớn hơn 1, chỉ có hai ước là 1 và chính nó.</p><p><b>Hợp số</b> là số tự nhiên lớn hơn 1, có nhiều hơn hai ước.</p><div class="example">2, 3, 5, 7 là số nguyên tố. 4, 6, 8, 9 là hợp số.</div></div>
+<div class="card"><h2>4. Phân tích ra thừa số nguyên tố</h2><p>Viết một hợp số dưới dạng tích các thừa số nguyên tố.</p><div class="rule">Ví dụ: 60 = 2 × 2 × 3 × 5 = 2² × 3 × 5</div><p class="muted">Mỗi thừa số trong tích cuối cùng đều là số nguyên tố.</p></div>
+</div>
+<div class="card"><h2>Thử nhanh dấu hiệu chia hết</h2><p class="muted">Nhập một số tự nhiên để nhận gợi ý kiểm tra.</p><div class="controls"><input id="numCheck" type="number" min="0" step="1" value="135" aria-label="Nhập số tự nhiên"><button class="primary" id="checkNum">Kiểm tra</button></div><div id="numResult" class="rule" aria-live="polite">Nhập số rồi bấm kiểm tra.</div></div>
+</section>
+<section id="thuthach" class="panel">
+<div class="card"><h2>Chọn chặng đua</h2><p class="muted">Mỗi chặng gồm câu hỏi có mức độ tăng dần. Mỗi câu đúng được 10 điểm. Học liệu hiển thị giải thích sau khi trả lời.</p>
+<div class="levels"><div class="level">🚦 Khởi động<br><small>Nhận biết</small></div><div class="level">🧩 Tăng tốc<br><small>Thông hiểu</small></div><div class="level">⚡ Bứt phá<br><small>Vận dụng</small></div><div class="level">🏁 Về đích<br><small>Tư duy</small></div></div>
+<div class="controls"><label for="stage">Chọn chặng:</label><select id="stage"><option value="0">Khởi động</option><option value="1">Tăng tốc</option><option value="2">Bứt phá</option><option value="3">Về đích</option></select><button class="primary" id="start">Bắt đầu</button></div>
+<div class="track"><div class="bar" id="progress"></div></div><div class="muted" id="progressText">Chưa bắt đầu · Điểm: 0</div>
+<div id="game" class="qbox" style="margin-top:14px"><b>Sẵn sàng chưa?</b><p>Chọn một chặng và bấm Bắt đầu để nhận câu hỏi.</p></div>
+<div class="controls"><button class="secondary" id="next" disabled>Câu tiếp theo</button><button class="secondary" id="restart">Chơi lại chặng</button></div>
+</div></section>
+<section id="huongdan" class="panel"><div class="card"><h2>Hướng dẫn sử dụng dành cho giáo viên</h2>
+<ol><li><b>Trước giờ học:</b> giáo viên chọn phần Bản đồ kiến thức để học sinh ôn lại khái niệm và dấu hiệu.</li><li><b>Trong giờ học:</b> tổ chức thi cá nhân, theo cặp hoặc theo nhóm; học sinh giải thích lý do chọn đáp án.</li><li><b>Sau giờ học:</b> giao học sinh tự luyện một chặng và ghi lại câu sai cùng cách sửa.</li></ol>
+<p><b>Mục tiêu:</b> Củng cố khái niệm chia hết, dấu hiệu chia hết cho 2, 3, 5, 9; nhận biết số nguyên tố, hợp số và phân tích một số ra thừa số nguyên tố.</p>
+<p><b>Đánh giá:</b> Điểm số chỉ là một minh chứng. Giáo viên cần quan sát thêm cách học sinh giải thích, kiểm tra tính đúng đắn và sửa sai.</p>
+<p><b>Khuyến nghị:</b> Khuyến khích học sinh tự nhẩm hoặc trình bày cách làm trước khi sử dụng phần kiểm tra tự động. Không chỉ chạy đua tốc độ.</p>
+<p><b>Sử dụng:</b> Tệp HTML độc lập, mở bằng trình duyệt trên điện thoại hoặc máy tính; không cần tài khoản, không gửi dữ liệu học sinh lên máy chủ.</p>
+</div></section>
+</main><footer>HỌC LIỆU SỐ TOÁN THCS · Có thể sử dụng ngoại tuyến</footer>
+<script>
+document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.tab).classList.add('active')}));
+document.getElementById('checkNum').addEventListener('click',()=>{let v=document.getElementById('numCheck').value,n=Number(v);let el=document.getElementById('numResult');if(v===''||!Number.isInteger(n)||n<0){el.textContent='Vui lòng nhập số tự nhiên hợp lệ.';return}let sum=String(n).split('').reduce((s,c)=>s+Number(c),0);el.innerHTML=`<b>${n}</b>: ${n%2===0?'chia hết':'không chia hết'} cho 2; ${n%5===0?'chia hết':'không chia hết'} cho 5; ${sum%3===0?'chia hết':'không chia hết'} cho 3; ${sum%9===0?'chia hết':'không chia hết'} cho 9. <br>Tổng các chữ số là ${sum}.`});
+const bank=[
+[
+['Số nào sau đây chia hết cho 2?',['135','248','315','427'],1,'Số tận cùng là 8 nên 248 chia hết cho 2.'],
+['Số nào chia hết cho cả 2 và 5?',['125','230','342','415'],1,'Số chia hết cho cả 2 và 5 có chữ số tận cùng là 0.'],
+['Trong các số sau, số nào là số nguyên tố?',['1','9','13','15'],2,'13 chỉ có hai ước là 1 và 13.'],
+['Số 36 có tổng các chữ số bằng:',['6','8','9','12'],2,'3 + 6 = 9.']
+],
+[
+['Số nào chia hết cho 3?',['124','215','321','502'],2,'3 + 2 + 1 = 6, chia hết cho 3.'],
+['Số nào chia hết cho 9?',['234','315','427','512'],0,'2 + 3 + 4 = 9, chia hết cho 9.'],
+['Khẳng định nào đúng?',['Mọi số chẵn đều chia hết cho 5','Số chia hết cho 10 thì chia hết cho 2 và 5','Số chia hết cho 3 đều chia hết cho 9','Số 1 là số nguyên tố'],1,'Số chia hết cho 10 có tận cùng bằng 0 nên chia hết cho cả 2 và 5.'],
+['Số nào là hợp số?',['2','3','17','21'],3,'21 có các ước 1, 3, 7, 21.']
+],
+[
+['Một số có tổng chữ số bằng 18 và tận cùng là 5. Số đó chắc chắn chia hết cho:',['2 và 3','3 và 5','5 và 9','2 và 9'],1,'Tổng chữ số 18 chia hết cho 3; tận cùng 5 nên chia hết cho 5.'],
+['Phân tích 36 ra thừa số nguyên tố được:',['2 × 18','3 × 12','2² × 3²','6 × 6'],2,'36 = 2 × 2 × 3 × 3 = 2² × 3².'],
+['Số nhỏ nhất lớn hơn 1 vừa chia hết cho 2 vừa chia hết cho 3 là:',['4','5','6','8'],2,'6 là số nhỏ nhất lớn hơn 1 chia hết cho cả 2 và 3.'],
+['Có 24 quyển vở chia đều vào các phần quà, mỗi phần có số vở như nhau. Số phần quà nào sau đây có thể chọn?',['5','7','8','9'],2,'24 chia hết cho 8, mỗi phần có 3 quyển.']
+],
+[
+['Tìm chữ số x để số 4x2 chia hết cho 3. Có bao nhiêu giá trị x?',['2 giá trị','3 giá trị','4 giá trị','5 giá trị'],2,'4 + x + 2 = 6 + x chia hết cho 3; x có thể là 0, 3, 6, 9: có 4 giá trị.'],
+['Một số chia hết cho 5 và 9, có ba chữ số, nhỏ nhất có thể là:',['105','135','180','225'],1,'135 có tận cùng 5 và tổng chữ số 9; trong các lựa chọn đây là số nhỏ nhất thỏa mãn.'],
+['Phân tích 90 ra thừa số nguyên tố:',['2 × 3 × 15','2 × 3² × 5','3 × 30','9 × 10'],1,'90 = 2 × 45 = 2 × 3² × 5.'],
+['Bạn An nói: “Nếu một số chia hết cho 6 thì số đó chia hết cho 2 và 3”. Nhận xét đúng là:',['Đúng','Sai vì phải chia hết cho 5','Sai vì phải là số lẻ','Chỉ đúng với số có hai chữ số'],0,'Vì 6 = 2 × 3; một số chia hết cho 6 thì chia hết cho 2 và 3.']
+]];
+let stage=0,index=0,score=0,answered=false,activeBank=[];
+const game=document.getElementById('game'),next=document.getElementById('next');
+function showQuestion(){answered=false;next.disabled=true;let q=activeBank[index];game.innerHTML=`<div class="muted">Câu ${index+1}/${activeBank.length} · ${['Khởi động','Tăng tốc','Bứt phá','Về đích'][stage]}</div><h3>${q[0]}</h3><div class="answers">${q[1].map((a,i)=>`<button data-i="${i}">${'ABCD'[i]}. ${a}</button>`).join('')}</div><div id="fb" class="feedback" aria-live="polite"></div>`;document.getElementById('progress').style.width=(index/activeBank.length*100)+'%'}
+game.addEventListener('click',e=>{let btn=e.target.closest('button[data-i]');if(!btn||answered)return;answered=true;let q=activeBank[index],ok=+btn.dataset.i===q[2];if(ok)score+=10;game.querySelectorAll('.answers button').forEach(x=>{x.disabled=true;if(+x.dataset.i===q[2])x.style.border='2px solid #16834a'});let fb=document.getElementById('fb');fb.className='feedback '+(ok?'good':'bad');fb.textContent=(ok?'Chính xác! +10 điểm. ':'Chưa chính xác. ')+q[3];next.disabled=false;document.getElementById('progressText').textContent=`Đã trả lời ${index+1}/${activeBank.length} câu · Điểm: ${score}`});
+document.getElementById('start').addEventListener('click',()=>{stage=+document.getElementById('stage').value;activeBank=bank[stage];index=0;score=0;document.getElementById('progressText').textContent='Bắt đầu chặng · Điểm: 0';showQuestion()});
+next.addEventListener('click',()=>{if(index<activeBank.length-1){index++;showQuestion()}else{document.getElementById('progress').style.width='100%';game.innerHTML=`<h3>🏁 Hoàn thành chặng đua!</h3><p>Bạn đạt <b>${score}/${activeBank.length*10} điểm</b>.</p><p>${score>=activeBank.length*10*.75?'Rất tốt! Hãy thử chặng tiếp theo.':'Hãy xem lại phần giải thích và luyện tập thêm nhé.'}</p>`;next.disabled=true;document.getElementById('progressText').textContent=`Hoàn thành · Điểm: ${score}` }});
+document.getElementById('restart').addEventListener('click',()=>{if(!activeBank.length){game.innerHTML='<b>Chọn một chặng và bấm Bắt đầu.</b>';return}index=0;score=0;document.getElementById('progressText').textContent='Chơi lại · Điểm: 0';showQuestion()});
+</script></body></html>

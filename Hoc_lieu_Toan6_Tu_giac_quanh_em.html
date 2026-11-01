@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Học liệu số tương tác Toán 6: khám phá các hình tứ giác, chu vi và diện tích.">
+<title>Khám phá thế giới hình học – Tứ giác quanh em</title>
+<style>
+:root{--ink:#17243b;--muted:#607089;--bg:#f3f6fb;--card:#fff;--blue:#2457d6;--teal:#0d9488;--gold:#f4b740;--line:#dce4ef;--good:#16834a;--bad:#c43d4b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{background:linear-gradient(120deg,#173b86,#2869d8 62%,#18a7a0);color:#fff;padding:28px 18px 24px}
+.wrap{max-width:1080px;margin:auto;padding:0 16px}header .eyebrow{opacity:.85;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.78rem}
+h1{font-size:clamp(1.65rem,4vw,2.5rem);line-height:1.15;margin:8px 0}header p{max-width:760px;margin:10px 0 0;color:#eaf2ff}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}button,.tab{border:0;border-radius:12px;padding:11px 15px;font:inherit;font-weight:700;cursor:pointer}
+nav button{background:#e7efff;color:#17418f}nav button.active{background:var(--blue);color:#fff}
+main{padding:18px 0 42px}.panel{display:none}.panel.active{display:block}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 5px 18px #23395b0b}
+h2{font-size:1.35rem;margin:0 0 10px}h3{font-size:1.05rem;margin:0 0 8px}.muted{color:var(--muted)}
+.shape-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.shape{border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center;background:#fbfdff}
+.shape svg{width:100%;height:120px}.shape strong{display:block;margin-top:4px}
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:12px 0}
+select,input[type=range]{accent-color:var(--blue)}select{padding:9px;border:1px solid var(--line);border-radius:10px;background:#fff}
+button.primary{background:var(--blue);color:#fff}button.secondary{background:#e9effb;color:#1d438d}button:focus-visible,select:focus-visible{outline:3px solid #f4b740;outline-offset:2px}
+.canvas{background:#f8fbff;border:1px dashed #b8c8e2;border-radius:14px;padding:12px}
+#shapeDemo{width:100%;height:230px;display:block}
+.formula{background:#eef4ff;border-left:4px solid var(--blue);padding:10px 13px;border-radius:8px;margin:10px 0;font-weight:650}
+.question{padding:14px 0;border-bottom:1px solid var(--line)}.question:last-child{border:0}
+.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:8px}
+.options button{background:#f0f4fb;color:var(--ink);text-align:left;border:1px solid var(--line);font-weight:550}
+.options button.selected{border:2px solid var(--blue);background:#eaf0ff}
+.feedback{margin-top:8px;font-weight:650}.good{color:var(--good)}.bad{color:var(--bad)}
+footer{text-align:center;color:var(--muted);font-size:.88rem;padding:22px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.shape-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.options{grid-template-columns:1fr 1fr}.card{padding:15px}header{padding-top:22px}}
+@media(max-width:380px){.shape-grid,.options{grid-template-columns:1fr}}
+</style></head>
+<body>
+<header><div class="wrap"><div class="eyebrow">Học liệu số Toán 6 · Khám phá và trải nghiệm</div>
+<h1>KHÁM PHÁ THẾ GIỚI HÌNH HỌC<br> TỨ GIÁC QUANH EM</h1>
+<p>Quan sát – thao tác – khám phá công thức – vận dụng vào những đồ vật quen thuộc. Học liệu dành cho học sinh tự học và giáo viên tổ chức hoạt động trên lớp.</p></div></header>
+<div class="wrap"><nav aria-label="Các phần học liệu">
+<button class="active" data-tab="khampha">Khám phá</button><button data-tab="tinh">Thử tính</button><button data-tab="luyentap">Luyện tập</button><button data-tab="giaovien">Góc giáo viên</button></nav></div>
+<main class="wrap">
+<section id="khampha" class="panel active">
+<div class="grid">
+<div class="card"><h2>1. Nhận diện các hình</h2><p class="muted">Quan sát hình vẽ và đọc đặc điểm nổi bật. Hãy thử tìm các hình này trong lớp học và ở nhà.</p>
+<div class="shape-grid">
+<div class="shape"><svg viewBox="0 0 180 120"><rect x="48" y="12" width="84" height="84" fill="#dce9ff" stroke="#2457d6" stroke-width="4"/></svg><strong>Hình vuông</strong><small>4 cạnh bằng nhau, 4 góc vuông</small></div>
+<div class="shape"><svg viewBox="0 0 180 120"><rect x="28" y="25" width="124" height="70" fill="#d8f5ef" stroke="#0d9488" stroke-width="4"/></svg><strong>Hình chữ nhật</strong><small>Hai cặp cạnh đối bằng nhau, 4 góc vuông</small></div>
+<div class="shape"><svg viewBox="0 0 180 120"><polygon points="45,88 70,20 150,20 125,88" fill="#fff0ce" stroke="#d28a12" stroke-width="4"/></svg><strong>Hình bình hành</strong><small>Các cặp cạnh đối song song</small></div>
+<div class="shape"><svg viewBox="0 0 180 120"><polygon points="90,8 150,60 90,112 30,60" fill="#f2e7ff" stroke="#8752c7" stroke-width="4"/></svg><strong>Hình thoi</strong><small>4 cạnh bằng nhau</small></div>
+</div></div>
+<div class="card"><h2>2. Thay đổi kích thước</h2><p class="muted">Kéo thanh trượt để thay đổi chiều dài và chiều rộng. Quan sát chu vi, diện tích thay đổi như thế nào.</p>
+<div class="canvas"><svg id="shapeDemo" viewBox="0 0 420 230" role="img" aria-label="Hình chữ nhật có thể thay đổi kích thước"><rect id="demoRect" x="70" y="40" width="220" height="120" rx="2" fill="#dce9ff" stroke="#2457d6" stroke-width="4"/><text id="labelA" x="180" y="190" text-anchor="middle" fill="#17243b" font-size="15">Dài: 8 cm</text><text id="labelB" x="315" y="105" fill="#17243b" font-size="15">Rộng: 4 cm</text></svg></div>
+<div class="controls"><label for="length">Chiều dài: <b id="lv">8</b> cm</label><input id="length" type="range" min="3" max="12" value="8"></div>
+<div class="controls"><label for="width">Chiều rộng: <b id="wv">4</b> cm</label><input id="width" type="range" min="2" max="8" value="4"></div>
+<div class="formula" id="measure">Chu vi = 24 cm · Diện tích = 32 cm²</div>
+<p class="muted">Gợi mở: Nếu tăng chiều dài mà giữ nguyên chiều rộng, đại lượng nào thay đổi?</p></div>
+</div>
+<div class="card" style="margin-top:16px"><h2>3. Công thức cần nhớ</h2>
+<div class="grid">
+<div><h3>Hình chữ nhật</h3><div class="formula">Chu vi: P = 2 × (a + b)<br>Diện tích: S = a × b</div></div>
+<div><h3>Hình vuông</h3><div class="formula">Chu vi: P = 4 × a<br>Diện tích: S = a × a</div></div>
+<div><h3>Hình bình hành</h3><div class="formula">Chu vi: P = 2 × (a + b)<br>Diện tích: S = a × h</div></div>
+<div><h3>Hình thoi</h3><div class="formula">Chu vi: P = 4 × a<br>Diện tích: S = (d₁ × d₂) : 2</div></div>
+</div><p class="muted">Trong đó a, b là độ dài cạnh; h là chiều cao tương ứng; d₁, d₂ là hai đường chéo. Các độ dài phải dùng đơn vị thống nhất.</p></div>
+</section>
+<section id="tinh" class="panel"><div class="card"><h2>Thử tính chu vi và diện tích</h2><p class="muted">Chọn hình, nhập số đo rồi bấm kiểm tra. Dùng dấu chấm hoặc dấu phẩy đều được.</p>
+<div class="controls"><label for="kind">Chọn hình:</label><select id="kind"><option value="rect">Hình chữ nhật</option><option value="square">Hình vuông</option><option value="para">Hình bình hành</option><option value="rhombus">Hình thoi</option></select></div>
+<div class="controls"><label for="a">Cạnh a (cm):</label><input id="a" type="number" min="0.1" step="0.1" value="8"></div>
+<div class="controls"><label for="b" id="blabel">Cạnh b (cm):</label><input id="b" type="number" min="0.1" step="0.1" value="5"></div>
+<div class="controls"><label for="h" id="hlabel">Chiều cao h (cm):</label><input id="h" type="number" min="0.1" step="0.1" value="4"></div>
+<div class="controls"><label for="d1" id="d1label" style="display:none">Đường chéo d₁:</label><input id="d1" type="number" min="0.1" step="0.1" value="6" style="display:none"><label for="d2" id="d2label" style="display:none">Đường chéo d₂:</label><input id="d2" type="number" min="0.1" step="0.1" value="8" style="display:none"></div>
+<button class="primary" id="calc">Tính kết quả</button><div id="calcResult" class="formula" aria-live="polite">Kết quả sẽ xuất hiện tại đây.</div>
+</div></section>
+<section id="luyentap" class="panel"><div class="card"><h2>Thử thách 5 câu</h2><p class="muted">Chọn một đáp án cho mỗi câu, sau đó bấm “Chấm bài”.</p><div id="quiz"></div><button class="primary" id="grade">Chấm bài</button> <button class="secondary" id="reset">Làm lại</button><div id="score" class="formula" aria-live="polite">Chưa chấm bài.</div></div></section>
+<section id="giaovien" class="panel"><div class="card"><h2>Thông tin khai thác học liệu</h2>
+<p><b>Mục đích:</b> Hỗ trợ học sinh nhận diện hình tứ giác quen thuộc, khám phá mối liên hệ giữa kích thước với chu vi và diện tích, luyện tập vận dụng.</p>
+<p><b>Gợi ý tổ chức:</b></p><ol><li>Khởi động: yêu cầu học sinh chụp/ghi tên 3 đồ vật có dạng tứ giác.</li><li>Khám phá: học sinh quan sát các hình, nêu dấu hiệu nhận biết.</li><li>Trải nghiệm: thay đổi hai thanh trượt và dự đoán sự thay đổi của chu vi, diện tích.</li><li>Luyện tập: cá nhân làm 5 câu hỏi; trao đổi cách giải và đơn vị.</li><li>Vận dụng: đo mặt bàn, quyển vở hoặc nền một khu vực để ước tính diện tích.</li></ol>
+<p><b>Minh chứng:</b> Kết quả bài luyện tập, lời giải phần thử tính, câu trả lời giải thích mối quan hệ giữa số đo và diện tích.</p>
+<p><b>Lưu ý chuyên môn:</b> Với hình bình hành, chiều cao phải vuông góc với đáy tương ứng. Với hình thoi, công thức diện tích dùng hai đường chéo.</p>
+<p><b>Sử dụng:</b> Mở tệp HTML bằng trình duyệt; không cần cài ứng dụng, không cần tài khoản, có thể dùng ngoại tuyến.</p>
+</div></section>
+</main><footer>HỌC LIỆU SỐ TOÁN THCS · Tài nguyên phục vụ dạy học và tự học</footer>
+<script>
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.tab).classList.add('active')}));
+const len=document.getElementById('length'),wid=document.getElementById('width');
+function updateDemo(){let a=+len.value,b=+wid.value;document.getElementById('lv').textContent=a;document.getElementById('wv').textContent=b;let r=document.getElementById('demoRect');r.setAttribute('width',a*25);r.setAttribute('height',b*22);r.setAttribute('y',105-b*11);document.getElementById('labelA').textContent='Dài: '+a+' cm';document.getElementById('labelB').textContent='Rộng: '+b+' cm';document.getElementById('measure').textContent=`Chu vi = ${2*(a+b)} cm · Diện tích = ${a*b} cm²`}
+len.addEventListener('input',updateDemo);wid.addEventListener('input',updateDemo);updateDemo();
+const kind=document.getElementById('kind');function fields(){let k=kind.value,para=k==='para',rh=k==='rhombus',sq=k==='square';document.getElementById('blabel').style.display=sq?'none':'inline';document.getElementById('b').style.display=sq?'none':'inline-block';document.getElementById('hlabel').style.display=para?'inline':'none';document.getElementById('h').style.display=para?'inline-block':'none';['d1','d2'].forEach(id=>document.getElementById(id).style.display=rh?'inline-block':'none');['d1label','d2label'].forEach(id=>document.getElementById(id).style.display=rh?'inline':'none');}
+kind.addEventListener('change',fields);fields();
+document.getElementById('calc').addEventListener('click',()=>{let k=kind.value,a=+document.getElementById('a').value,b=+document.getElementById('b').value,h=+document.getElementById('h').value,d1=+document.getElementById('d1').value,d2=+document.getElementById('d2').value;if(!(a>0)||((k!=='square'&&k!=='rhombus')&&!(b>0))||(k==='para'&&!(h>0))||(k==='rhombus'&&(!(d1>0)||!(d2>0)))){document.getElementById('calcResult').textContent='Vui lòng nhập các số đo dương hợp lệ.';return}let p,s;if(k==='rect'){p=2*(a+b);s=a*b}else if(k==='square'){p=4*a;s=a*a}else if(k==='para'){p=2*(a+b);s=a*h}else{p=4*a;s=d1*d2/2}document.getElementById('calcResult').textContent=`Chu vi: ${p} cm · Diện tích: ${s} cm²`});
+const questions=[
+['Hình có bốn cạnh bằng nhau và bốn góc vuông là hình nào?',['Hình chữ nhật','Hình vuông','Hình bình hành','Hình thoi'],1,'Hình vuông có bốn cạnh bằng nhau và bốn góc vuông.'],
+['Hình chữ nhật có chiều dài 9 cm, chiều rộng 4 cm. Chu vi là:',['13 cm','26 cm','36 cm','18 cm'],1,'P = 2 × (9 + 4) = 26 cm.'],
+['Diện tích hình vuông cạnh 5 cm là:',['10 cm²','20 cm²','25 cm²','30 cm²'],2,'S = 5 × 5 = 25 cm².'],
+['Diện tích hình bình hành có đáy 8 cm, chiều cao 3 cm là:',['11 cm²','22 cm²','24 cm²','48 cm²'],2,'S = a × h = 8 × 3 = 24 cm².'],
+['Hình thoi có hai đường chéo 6 cm và 10 cm. Diện tích là:',['16 cm²','30 cm²','60 cm²','32 cm²'],1,'S = (6 × 10) : 2 = 30 cm².']];
+const quiz=document.getElementById('quiz');questions.forEach((q,i)=>{let d=document.createElement('div');d.className='question';d.innerHTML=`<b>Câu ${i+1}. ${q[0]}</b><div class="options">${q[1].map((v,j)=>`<button type="button" data-q="${i}" data-a="${j}">${'ABCD'[j]}. ${v}</button>`).join('')}</div><div class="feedback" id="fb${i}"></div>`;quiz.appendChild(d)});
+quiz.addEventListener('click',e=>{if(e.target.dataset.q===undefined)return;quiz.querySelectorAll(`[data-q="${e.target.dataset.q}"]`).forEach(x=>x.classList.remove('selected'));e.target.classList.add('selected')});
+document.getElementById('grade').addEventListener('click',()=>{let score=0;questions.forEach((q,i)=>{let sel=quiz.querySelector(`button.selected[data-q="${i}"]`),ok=sel&&+sel.dataset.a===q[2];if(ok)score++;let f=document.getElementById('fb'+i);f.className='feedback '+(ok?'good':'bad');f.textContent=(ok?'Chính xác! ':'Chưa đúng. ')+q[3]});document.getElementById('score').textContent=`Kết quả: ${score}/5 câu đúng.`});
+document.getElementById('reset').addEventListener('click',()=>{quiz.querySelectorAll('button').forEach(x=>x.classList.remove('selected'));questions.forEach((q,i)=>{let f=document.getElementById('fb'+i);f.textContent='';f.className='feedback'});document.getElementById('score').textContent='Chưa chấm bài.'});
+</script></body></html>
